@@ -148,3 +148,85 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
     print("Great!")
 
 
+# String Formatting
+
+# This prints out "Howdy, Jack!"
+name = "Jack"
+print("Howdy, %s!" % name)
+
+# This prints out "Jack is 123 years old."
+name = "Jack"
+age = (123)
+print("%s is %d years old." % (name, age))
+
+# This prints out: A list: [1, 2, 3]
+mylist = [1,2,3]
+print("A list: %s" % mylist)
+
+## Exercise
+
+data = ("Jack", "Miyamoto", 53.44)
+format_string = "Hello %s %s. Your current balance is $%s."
+
+print(format_string % data)
+
+# Basic String Operations
+
+astring = "Hello world!"
+print("single quotes are ' '")
+
+print(len(astring))
+print(astring.index ("o"))
+print(astring.count("l"))
+
+print(astring[4:7])
+print(astring[:7])
+print(astring[7:])
+print(astring[-2])
+print(astring[1:3:2]) #extended slice syntax. The general form is [start:stop:step]
+print(astring[::-1])
+print(astring.upper())
+print(astring.lower())
+
+print(astring.startswith("Hello"))
+print(astring.endswith("asdfasdfasdf"))
+
+afewwords = astring.split(" ")
+print(afewwords)
+
+# Exercise
+
+x = "Strings are awesome!"
+# Length should be 20
+print("Length of s = %d" % len(x))
+
+# First occurrence of "a" should be at index 8
+print("The first occurrence of the letter a = %d" % x.index("a"))
+
+# Number of a's should be 2
+print("a occurs %d times" % x.count("a"))
+
+# Slicing the string into bits
+print("The first five characters are '%s'" % x[:5]) # Start to 5
+print("The next five characters are '%s'" % x[5:10]) # 5 to 10
+print("The thirteenth character is '%s'" % x[12]) # Just number 12
+print("The characters with odd index are '%s'" %x[1::2]) #(0-based indexing)
+print("The last five characters are '%s'" % x[-5:]) # 5th-from-last to end
+
+# Convert everything to uppercase
+print("String in uppercase: %s" % x.upper())
+
+# Convert everything to lowercase
+print("String in lowercase: %s" % x.lower())
+
+# Check how a string starts
+if x.startswith("Str"):
+    print("String starts with 'Str'. Good!")
+
+# Check how a string ends
+if x.endswith("ome!"):
+    print("String ends with 'ome!'. Good!")
+
+# Split the string into three separate strings,
+# each containing only a word
+print("Split the words of the string: %s" % x.split(" "))
